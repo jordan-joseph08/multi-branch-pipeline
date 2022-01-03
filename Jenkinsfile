@@ -3,13 +3,16 @@ pipeline{
         label "master"
     }
     stages{
-        stage("build"){
+        stage("clone repo"){
             steps{
                 //clean workspace before build
                 cleanWs()
-                echo "Building..."
-                echo "Testing..."
-                echo "Deployment..."
+                sh '''
+                 ls
+                 git init
+                 git clone https://github.com/tpouche94/multi-branch-pipeline.git
+                 ls
+                 '''
             } 
         }
         stage("clean workspace"){
