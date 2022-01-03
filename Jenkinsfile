@@ -18,7 +18,6 @@ pipeline{
         stage("clean workspace"){
             steps {
                 cleanWs()
-                sh 'ls'
             }
         }
     }
