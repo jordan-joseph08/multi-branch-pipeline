@@ -8,7 +8,7 @@ pipeline{
                 //clean workspace before build
                 cleanWs()
                 sh '''
-                 echo "Hello world, how are you doing. Jordan here"
+                 echo "Hello world, how are you doing. Jordan here today"
                  '''
             } 
         }
