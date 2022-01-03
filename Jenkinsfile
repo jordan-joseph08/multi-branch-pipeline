@@ -3,11 +3,11 @@ pipeline{
         label "master"
     }
     stages{
-        stage("execute some stuff"){
+        stage("build"){
             steps{
                 //clean workspace before build
                 cleanWs()
-                echo "========executing A========"
+                echo "Building..."
             } 
         }
         stage("clean workspace"){
