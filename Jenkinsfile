@@ -8,6 +8,8 @@ pipeline{
                 //clean workspace before build
                 cleanWs()
                 echo "Building..."
+                echo "Testing..."
+                echo "Deployment..."
             } 
         }
         stage("clean workspace"){
