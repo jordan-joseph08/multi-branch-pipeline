@@ -8,10 +8,7 @@ pipeline{
                 //clean workspace before build
                 cleanWs()
                 sh '''
-                 ls
-                 git init
-                 git clone https://github.com/tpouche94/multi-branch-pipeline.git
-                 ls
+                 echo "Hello from master branch"
                  '''
             } 
         }
