@@ -8,7 +8,7 @@ pipeline{
                 //clean workspace before build
                 cleanWs()
                 sh '''
-                 echo "Hello from master branch"
+                 echo "Hello"
                  '''
             } 
         }
