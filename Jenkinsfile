@@ -7,9 +7,7 @@ pipeline{
             steps{
                 //clean workspace before build
                 cleanWs()
-                sh '''
-                 echo "Building"
-                 '''
+                echo "Building"
             } 
         }
         stage("clean workspace"){
