@@ -2,11 +2,10 @@ pipeline{
     agent{
         label "master"
     }
-    properties ([
-  parameters([
+    
+    parameters {
     choice(name: 'choices', choices: ['a','b','c'], description: '3 choices')
-    ])
-        ])
+    }
     stages{
         stage("clone repo"){
             steps{
