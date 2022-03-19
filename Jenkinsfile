@@ -3,7 +3,7 @@ pipeline{
         label "master"
     }
     properties([
-  parameters([
+  options([
     choice(name: 'choices', choices: ['a','b','c'], description: '3 choices')
     
   ])
