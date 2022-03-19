@@ -3,7 +3,7 @@ pipeline{
         label "master"
     }
     
-   if (env.JOB_NAME == 'test-projects-3/test-pipleine/candidate-2') 
+   if ( $JOB_NAME == 'test-projects-3/test-pipleine/candidate-2') 
                         {
                         parameters {
 choice(name: 'choices', choices: ['a', 'b'], description: '2 choices')
