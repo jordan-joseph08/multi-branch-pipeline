@@ -20,6 +20,7 @@ choice(name: 'choices', choices: ['a', 'b'], description: '2 choices')
 }
                             
                        }
+            }
     
     else {
        parameters {
