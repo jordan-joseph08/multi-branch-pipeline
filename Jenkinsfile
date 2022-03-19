@@ -7,7 +7,7 @@ pipeline{
             steps{
                 //clean workspace before build
                 cleanWs()
-                echo "Testing in feature branch"
+                echo "$JOB_NAME"
             } 
         }
         stage("clean workspace"){
