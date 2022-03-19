@@ -2,8 +2,8 @@ pipeline{
     agent{
         label "master"
     }
-    properties([
-  options([
+    options([
+  parameters([
     choice(name: 'choices', choices: ['a','b','c'], description: '3 choices')
     
   ])
