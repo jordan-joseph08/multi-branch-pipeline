@@ -3,7 +3,17 @@ pipeline{
         label "master"
     }
     
-   if ( $JOB_NAME == 'test-projects-3/test-pipleine/candidate-2') 
+    stages{
+        stage("clone repo"){
+            steps{
+                //clean workspace before build
+                cleanWs()
+                echo "$JOB_NAME"
+            } 
+        }
+        stage('param') {
+            steps {
+                if ( $JOB_NAME == 'test-projects-3/test-pipleine/candidate-2') 
                         {
                         parameters {
 choice(name: 'choices', choices: ['a', 'b'], description: '2 choices')
@@ -16,14 +26,9 @@ choice(name: 'choices', choices: ['a', 'b'], description: '2 choices')
 choice(name: 'choices', choices: ['a', 'b', 'c'], description: '3 choices') 
     }
     }
-    stages{
-        stage("clone repo"){
-            steps{
-                //clean workspace before build
-                cleanWs()
-                echo "$JOB_NAME"
-            } 
+            }
         }
+        
         
         stage("clean workspace"){
             steps {
