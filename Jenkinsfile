@@ -4,7 +4,7 @@ pipeline{
     }
     properties([
   parameters([
-    choice(name: 'choices', choices: ['a','b','c'] description: '3 choices')
+    choice(name: 'choices', choices: ['a','b','c'], description: '3 choices')
     
   ])
 ])
