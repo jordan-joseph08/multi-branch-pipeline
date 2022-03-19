@@ -2,7 +2,16 @@ pipeline{
     agent{
         label "master"
     }
-    
+    stages('parameters') {
+        when {
+        expression { env.JOB_NAME == "test-projects-3/test-pipleine/candidate-2" }
+        }
+        steps {
+            parameters {
+    choice(name: 'choices', choices: ['a','b','c'], description: '2 choices')
+    }
+        }
+    }
     parameters {
     choice(name: 'choices', choices: ['a','b','c'], description: '3 choices')
     }
