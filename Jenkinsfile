@@ -13,6 +13,7 @@ pipeline{
         }
         stage('param') {
             steps {
+                step {
                 if ( $JOB_NAME == 'test-projects-3/test-pipleine/candidate-2') 
                         {
                         parameters {
@@ -28,6 +29,7 @@ choice(name: 'choices', choices: ['a', 'b', 'c'], description: '3 choices')
        }
     }
     }
+            }
             }
         
         
